@@ -45,3 +45,12 @@ function flames() {
         console.log("SIBLINGS");
     }
 }
+
+function show() {
+    let show = document.getElementById("theirname")
+    if (show.type == "password") {
+        show.type = "text";
+    } else {
+        show.type = "password";
+    }
+}
