@@ -1,5 +1,12 @@
+function getYourName() {
+    window.input1 = document.getElementById('yourname').value;
+    const card = document.querySelector(".inner");
+    card.classList.toggle("is-flipped");
+}
+
+
 function flames() {
-   const input1 = document.getElementById('yourname').value;
+    // const input1 = document.getElementById('yourname').value;
     const input2 = document.getElementById('theirname').value;
 
     let name1 = input1;
@@ -48,9 +55,10 @@ function flames() {
 
 function show() {
     let show = document.getElementById("theirname")
-    if (show.type == "password") {
-        show.type = "text";
-    } else {
+    if (show.type == "text") {
         show.type = "password";
+    } else {
+        show.type = "text";
     }
 }
+

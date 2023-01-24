@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Project Valentine</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game Card</title>
+	<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Project Valentine</h1>
-    <label for="yourname">Your Name:</label> <input type="text" id="yourname"> <br><br>
-    <label for="theirname">Their Name:</label> <input type="password" id="theirname"> <br><br>
-    <input type="checkbox" id="show" onclick="show()"> <label for="show">Show name</label> <br><br>
-    <button onclick="flames()">FLAMES</button>
-
-
-
-<script src="main.js"></script>
+	<div class="outer">
+		<div class="inner">
+			<div class="card front">
+                <label for="yourname">Your Name:</label>
+                <input type="text" id="yourname">
+                <button onclick="getYourName()">NAME1</button>
+			</div>
+			<div class="card back">
+                <label for="theirname">Their Name:</label> <input type="text" id="theirname"> 
+                <input type="checkbox" id="show" onclick="show()"> <label for="show">Hide</label> 
+                <button onclick="flames()">FLAMES</button>
+			</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
 </body>
 </html>
