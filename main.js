@@ -1,12 +1,5 @@
-function getYourName() {
-    window.input1 = document.getElementById('yourname').value;
-    const card = document.querySelector(".inner");
-    card.classList.toggle("is-flipped");
-}
-
-
 function flames() {
-    // const input1 = document.getElementById('yourname').value;
+    const input1 = document.getElementById('yourname').value;
     const input2 = document.getElementById('theirname').value;
 
     let name1 = input1;
@@ -51,6 +44,13 @@ function flames() {
     } else if (count === 6) {
         console.log("SIBLINGS");
     }
+
+
+
+
+// FLIP
+    const card = document.querySelector(".inner");
+    card.classList.toggle("is-flipped");
 }
 
 function show() {
