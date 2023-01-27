@@ -1,4 +1,5 @@
 function flames() {
+    let output = document.getElementById('output');
     const input1 = document.getElementById('yourname').value;
     const input2 = document.getElementById('theirname').value;
 
@@ -33,16 +34,23 @@ function flames() {
 
     if (count === 1) {
         console.log("FRIENDSHIP");
+        output.textContent = "FRIENDSHIP";
     } else if (count === 2) {
         console.log("LOVE");
+        output.textContent = "LOVE";
     } else if (count === 3) {
         console.log("AFFECTION");
+        output.textContent = "AFFECTION";
     } else if (count === 4) {
         console.log("MARRIAGE");
+        output.textContent = "MARRIAGE";
     } else if (count === 5) {
         console.log("ENEMIES");
+        output.textContent = "ENEMIES";
     } else if (count === 6) {
         console.log("SIBLINGS");
+        output.textContent = "SIBLINGS";
+
     }
 
 
@@ -54,11 +62,17 @@ function flames() {
 }
 
 function show() {
-    let show = document.getElementById("theirname")
+    let show = document.getElementById("theirname");
+    let checkbox = document.getElementById("show");
     if (show.type == "text") {
         show.type = "password";
+        checkbox.classList.add("fa-eye-slash")
+        checkbox.classList.remove("fa-eye")
+
     } else {
         show.type = "text";
+        checkbox.classList.add("fa-eye")
+        checkbox.classList.remove("fa-eye-slash")
     }
 }
 
