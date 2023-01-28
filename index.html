@@ -13,7 +13,7 @@
 	<div class="inner">
 		<div class="card front">
 				<p class="subtitle" id="floatdown">The Love Calculator</p>
-				<h1>Please Write:</h1> <br><br>
+				<h1 id="instruction">Please Write:</h1>
 				<div class="wrapper">
 					<div class="input-data">
 						<input type="text" id="yourname" required>
@@ -21,13 +21,14 @@
 						<label for="yourname">Your Name</label>
 					</div>
 					<div class="input-data">
-					   <input type="text" id="theirname"required>
+					   <input type="text" id="theirname" required>
 					   <button id="show" onclick="show()" class="fa-solid fa-eye"></button>
 					   <div class="underline"></div>
-					   <label for="theirname">Their Name</label>
+					   <label for="theirname">His/Her Name</label>
 				   </div>
 				</div>
-				<button class="flames" onclick="flames()">FLAMES</button> 
+				<button id="flames" onclick="flames()" class="fa-solid fa-heart" ></button> 
+				<p id="by">by: K.Iron</p>
 			</div>
 			<div class="card back">
 				<h1 id="output"></h1>

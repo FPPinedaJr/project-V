@@ -66,6 +66,7 @@ body {
     border-radius: 16px;
     box-shadow: 0px 6px 36px 6px rgb(255, 0, 0);
   }
+
   
   .front{
     background-image: url(/img/paper.jpg);
@@ -86,7 +87,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(36, 0, 197);
+    background-color: rgb(250, 57, 57);
 }
 
 /* CARD----------------------------------------------------------------------------------------------------------
@@ -99,14 +100,12 @@ body {
     width: 95%;
     background: transparent;
     margin: 20px;
-    /* box-shadow: 0px 0px 10px rgba(0,0,0,0.1); */
   }
 .input-data {
     margin-bottom: 60px;
 }
 input {
     background: transparent;
-    /* box-shadow: 0px 0px 10px rgba(0,0,0,1); */
 
 }
 
@@ -121,21 +120,19 @@ input {
     height: 100%;
     width: 100%;
     border: none;
-    font-size: 25px;
-    border-bottom: 2px solid silver;
+    font-size: 23px;
+    border-bottom: 2px solid black;
   }
   .input-data input:focus ~ label,
   .input-data input:valid ~ label{
     transform: translateY(-30px);
-    font-size: 25px;
-    color: White;
+    font-size: 20px;
   }
   .wrapper .input-data label{
     position: absolute;
     bottom: 10px;
     left: 0;
-    color: white;
-    font-size: 20px;
+    font-size: 18px;
     pointer-events: none;
     transition: all 0.3s ease;
   }
@@ -150,7 +147,7 @@ input {
     content: "";
     height: 100%;
     width: 100%;
-    background: #4158d0;
+    background: red;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
@@ -164,12 +161,31 @@ input {
   #show {
     background: transparent;
     border: 0;
-    color: white;
+    color: black;
     font-size: 20px;
     cursor: pointer;
     position: absolute;
     left: 90%; 
     top:30%;
+  }
+
+  #flames {
+    background: transparent;
+    border: 0;
+    color: red;
+    font-size: 70px;
+    cursor: pointer;
+    /* position: absolute; */
+  }
+
+  #by {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+  }
+
+  #instruction {
+    margin-bottom: 20px;
   }
 
 
@@ -187,10 +203,7 @@ input {
     animation-iteration-count: infinite;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
-    
-  }
-  
-  @keyframes floatup {
+  } @keyframes floatup {
     from {transform: translate(0, 0px);}
     65% {transform: translate(0, 18px);}
     to {transform: translate(0, 0px);}
@@ -202,12 +215,18 @@ input {
     animation-iteration-count: infinite;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
-    
-  }
-  
-  @keyframes floatdown {
+  } @keyframes floatdown {
     from {transform: translate(0, 0px);}
     65% {transform: translate(0, -12px);}
     to {transform: translate(0, 0px);}
   }
   
+  #flames {
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+  } @keyframes pulse {
+    25% {transform: scale(0.9);}
+    75% {transform: scale(1.1);}
+  }

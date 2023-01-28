@@ -3,6 +3,10 @@ function flames() {
     const input1 = document.getElementById('yourname').value;
     const input2 = document.getElementById('theirname').value;
 
+    if (input1 == "" || input2 == "") {
+        alert("Please write your name and his/her name!")
+    } else {
+
     let name1 = input1;
     let name2 = input2;
 
@@ -53,12 +57,10 @@ function flames() {
 
     }
 
-
-
-
 // FLIP
     const card = document.querySelector(".inner");
     card.classList.toggle("is-flipped");
+}
 }
 
 function show() {
