@@ -29,7 +29,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background-color: black;
-    background-image: url(/img/background05.gif);
+    background-image: url(./img/background05.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,7 +69,7 @@ body {
 
   
   .front{
-    background-image: url(/img/paper.jpg);
+    background-image: url(./img/paper.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
