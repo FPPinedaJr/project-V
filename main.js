@@ -47,7 +47,7 @@ function flames() {
     } else if (count === 5) {
         console.log("ENEMIES");
         output.textContent = "ENEMIES";
-    } else if (count === 6) {
+    } else if (count === 0) {
         console.log("SIBLINGS");
         output.textContent = "SIBLINGS";
 
