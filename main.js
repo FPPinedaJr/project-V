@@ -89,9 +89,7 @@ canvas.addEventListener("mousemove", function(e) {
     const x = e.offsetX;
     const y = e.offsetY;
     context.globalCompositeOperation = "destination-out";
-    context.arc(x, y, 10, 0, 360, false);
-    context.fill()
-})
+    context.beginPath();
+    context.arc(x, y, 25, 0, 360, false);
+    context.fill()})
 
-
-// 
