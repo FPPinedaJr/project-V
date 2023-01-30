@@ -60,6 +60,7 @@ function flames() {
 // FLIP
     const card = document.querySelector(".inner");
     card.classList.toggle("is-flipped");
+
 }
 }
 
@@ -78,3 +79,19 @@ function show() {
     }
 }
 
+
+const canvas = document.querySelector("canvas");
+const context = canvas.getContext("2d");
+context.fillStyle = "#515151";
+context.fillRect(0, 0, 300, 500);
+
+canvas.addEventListener("mousemove", function(e) {
+    const x = e.offsetX;
+    const y = e.offsetY;
+    context.globalCompositeOperation = "destination-out";
+    context.arc(x, y, 10, 0, 360, false);
+    context.fill()
+})
+
+
+// 
