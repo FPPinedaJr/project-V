@@ -1,6 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* user-drag: none; */
 }
 
 .title {
@@ -213,6 +220,7 @@ input {
 #canvas {
   position: absolute;
   top: 0;
+  cursor: grab;
 }
 
 

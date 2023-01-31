@@ -80,16 +80,71 @@ function show() {
 }
 
 
+// const canvas = document.querySelector("canvas");
+// const context = canvas.getContext("2d");
+// context.fillStyle = "#515151";
+// context.fillRect(0, 0, 300, 500);
+
+// canvas.addEventListener("mousemove", function(e) {
+//     const x = e.offsetX;
+//     const y = e.offsetY;
+//     context.globalCompositeOperation = "destination-out";
+//     context.beginPath();
+//     context.arc(x, y, 25, 0, 360, false);
+//     context.fill()})
+
+
+
+
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
-context.fillStyle = "#515151";
-context.fillRect(0, 0, 300, 500);
 
-canvas.addEventListener("mousemove", function(e) {
-    const x = e.offsetX;
-    const y = e.offsetY;
-    context.globalCompositeOperation = "destination-out";
-    context.beginPath();
-    context.arc(x, y, 25, 0, 360, false);
-    context.fill()})
 
+let background = new Image();
+background.src = "./img/scratch01.png";
+background.onload = function(){
+    let pattern = context.createPattern(background, "repeat");
+    context.fillStyle = pattern;
+    context.fillRect(0, 0, 300, 500);
+}
+
+
+
+
+let pressing = false;
+canvas.addEventListener("mousedown", e => {
+    pressing = true;
+});
+
+canvas.addEventListener("mousemove", function move(e) {
+    if (pressing) {
+        const x = e.offsetX;
+        const y = e.offsetY;
+        context.globalCompositeOperation = "destination-out";
+        context.beginPath();
+        context.arc(x, y, 25, 0, 360, false);
+        context.fill()}    
+    }
+);
+    
+document.addEventListener("mouseup", function stop(e) {
+    pressing = false;
+});
+
+
+
+
+
+let deviceType = "";
+const isTouchable = () => {
+    try {
+        document.createEvent("TouchEvent");
+        deviceType = "touch";
+        return true;
+    } catch(e) {
+        deviceType = "mouse"
+        return false
+    }
+}
+
+console.log(isTouchable())
