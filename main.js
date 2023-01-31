@@ -111,25 +111,7 @@ background.onload = function(){
 
 
 
-let pressing = false;
-canvas.addEventListener("mousedown", e => {
-    pressing = true;
-});
 
-canvas.addEventListener("mousemove", function move(e) {
-    if (pressing) {
-        const x = e.offsetX;
-        const y = e.offsetY;
-        context.globalCompositeOperation = "destination-out";
-        context.beginPath();
-        context.arc(x, y, 25, 0, 360, false);
-        context.fill()}    
-    }
-);
-    
-document.addEventListener("mouseup", function stop(e) {
-    pressing = false;
-});
 
 
 
@@ -147,4 +129,48 @@ const isTouchable = () => {
     }
 }
 
-console.log(isTouchable())
+if (isTouchable()) {
+    let pressing = false;
+    // canvas.addEventListener("touchstart", e => {
+    //     pressing = true;
+    // });
+
+    // canvas.addEventListener("touchmove", function move(e) {
+    //     if (pressing) {
+    //         const x = e.offsetX;
+    //         const y = e.offsetY;
+    //         context.globalCompositeOperation = "destination-out";
+    //         context.beginPath();
+    //         context.arc(x, y, 25, 0, 360, false);
+    //         context.fill()}    
+    //     }
+    // );
+
+    // document.addEventListener("touchend", function stop(e) {
+    //     pressing = false;
+    // });
+
+
+
+} else {
+    let pressing = false;
+    canvas.addEventListener("mousedown", e => {
+        pressing = true;
+    });
+
+    canvas.addEventListener("mousemove", function move(e) {
+        if (pressing) {
+            const x = e.offsetX;
+            const y = e.offsetY;
+            context.globalCompositeOperation = "destination-out";
+            context.beginPath();
+            context.arc(x, y, 25, 0, 360, false);
+            context.fill()}    
+        }
+    );
+        
+    document.addEventListener("mouseup", function stop(e) {
+        pressing = false;
+    });
+}
+
