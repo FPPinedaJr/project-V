@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="styles.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
-<body><br>
+<body>
 	<img src="./img/flames.gif" alt="FLAMES" class="title" id="floatup">
 <div class="outer">
 	<div class="inner">
@@ -21,14 +21,15 @@
 						<label for="yourname">Your Name</label>
 					</div>
 					<div class="input-data">
-					   <input type="text" id="theirname" required>
+					   <input type="text" id="theirname" oninput="showTip()" required>
 					   <button id="show" onclick="show()" class="fa-solid fa-eye"></button>
 					   <div class="underline"></div>
 					   <label for="theirname">His/Her Name</label>
+					   <p class="tip" id="tip">tip: hide this</p>
 				   </div>
 				</div>
 				<button id="flames" onclick="flames()" class="fa-solid fa-heart" ></button> 
-				<p id="by">by: K.Iron</p>
+				<p id="by">by: Andferno</p>
 			</div>
 			<div class="card back">
 				<canvas id="canvas" width="300" height="500"></canvas>
@@ -39,7 +40,6 @@
 			</div>
 		</div>
 	</div>
-	<br><br>
 
 
 

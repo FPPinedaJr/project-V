@@ -58,6 +58,7 @@ function flames() {
 }
 }
 
+
 function show() {
     let show = document.getElementById("theirname");
     let checkbox = document.getElementById("show");
@@ -73,42 +74,17 @@ function show() {
     }
 }
 
-
-// const canvas = document.querySelector("canvas");
-// const context = canvas.getContext("2d");
-// context.fillStyle = "#515151";
-// context.fillRect(0, 0, 300, 500);
-
-// canvas.addEventListener("mousemove", function(e) {
-//     const x = e.offsetX;
-//     const y = e.offsetY;
-//     context.globalCompositeOperation = "destination-out";
-//     context.beginPath();
-//     context.arc(x, y, 25, 0, 360, false);
-//     context.fill()})
-
-
-
-
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 
 
 let background = new Image();
-background.src = "./img/scratch01.png";
+background.src = "./img/scratch.jpg";
 background.onload = function(){
     let pattern = context.createPattern(background, "repeat");
     context.fillStyle = pattern;
     context.fillRect(0, 0, 300, 500);
 }
-
-
-
-
-
-
-
-
 
 
 let deviceType = "";

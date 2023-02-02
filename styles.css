@@ -20,10 +20,11 @@
 }
 
 .subtitle {
+
   text-align: center;
   font-size: 30px;
   font-weight: bolder;
-  font-family: 'Courier New, monospace';
+  font-family: 'Brush Script MT', cursive;
   color:orangered;
   position: absolute;
   top: 2%;
@@ -40,6 +41,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .outer {
@@ -71,7 +78,7 @@ body {
     backface-visibility: hidden;
     overflow: hidden;
     border-radius: 16px;
-    box-shadow: 0px 6px 36px 6px rgb(255, 0, 0);
+    box-shadow: 0px 6px 36px 6px rgb(255, 102, 0);
   }
 
   
@@ -89,12 +96,18 @@ body {
 }
 
 .back {
+    background-image: url(./img/paper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(250, 57, 57);
+    background-color: rgb(141, 100, 253);
 }
 
 /* CARD----------------------------------------------------------------------------------------------------------
@@ -154,7 +167,7 @@ input {
     content: "";
     height: 100%;
     width: 100%;
-    background: red;
+    background: orangered;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
@@ -163,8 +176,6 @@ input {
   .input-data input:valid ~ .underline:before{
     transform: scaleX(1);
   }
-
-
 
 /* FRONT----------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------
@@ -197,6 +208,14 @@ input {
     position: absolute;
     right: 2%;
     bottom: 2%;
+    font-family: 'Brush Script MT', cursive;
+  }
+
+  #tip {
+    font-size: 12px;
+    /* color: rgb(95, 95, 95); */
+    color: orangered;
+    margin: 3px 0 0 7px ;
   }
 
   #instruction {
@@ -221,6 +240,10 @@ input {
   position: absolute;
   top: 0;
   cursor: grab;
+}
+
+#output {
+  font-size: 40px;
 }
 
 
