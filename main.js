@@ -37,22 +37,16 @@ function flames() {
     count = count % 6;
 
     if (count === 1) {
-        console.log("FRIENDSHIP");
         output.textContent = "FRIENDSHIP";
     } else if (count === 2) {
-        console.log("LOVE");
         output.textContent = "LOVE";
     } else if (count === 3) {
-        console.log("AFFECTION");
         output.textContent = "AFFECTION";
     } else if (count === 4) {
-        console.log("MARRIAGE");
         output.textContent = "MARRIAGE";
     } else if (count === 5) {
-        console.log("ENEMIES");
         output.textContent = "ENEMIES";
     } else if (count === 0) {
-        console.log("SIBLINGS");
         output.textContent = "SIBLINGS";
 
     }
@@ -130,27 +124,23 @@ const isTouchable = () => {
 }
 
 if (isTouchable()) {
-    let pressing = false;
-    // canvas.addEventListener("touchstart", e => {
-    //     pressing = true;
-    // });
+    canvas.addEventListener("touchstart", function (e){
+        pressing = true;
+    })
 
-    // canvas.addEventListener("touchmove", function move(e) {
-    //     if (pressing) {
-    //         const x = e.offsetX;
-    //         const y = e.offsetY;
-    //         context.globalCompositeOperation = "destination-out";
-    //         context.beginPath();
-    //         context.arc(x, y, 25, 0, 360, false);
-    //         context.fill()}    
-    //     }
-    // );
+    canvas.addEventListener("touchmove", function (e) {
+        e.preventDefault()
+        if (pressing) {
+            var rect = e.target.getBoundingClientRect();
+            var x = e.targetTouches[0].pageX - rect.left;
+            var y = e.targetTouches[0].pageY - rect.top;
 
-    // document.addEventListener("touchend", function stop(e) {
-    //     pressing = false;
-    // });
-
-
+            context.globalCompositeOperation = "destination-out";
+            context.beginPath();
+            context.arc(x, y, 25, 0, 360, false);
+            context.fill()}    
+        
+    })
 
 } else {
     let pressing = false;
