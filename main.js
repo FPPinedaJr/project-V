@@ -37,16 +37,46 @@ function flames() {
     count = count % 6;
 
     if (count === 1) {
-        output.textContent = "FRIENDSHIP";
+        let img = document.createElement("img");
+        img.src = "./img/result/friendship.gif";
+        let src = document.getElementById("base");
+        src.appendChild(img);
+        outputDescription.textContent = "You two are just";
+        output.textContent = "FRIENDS";
     } else if (count === 2) {
+        let img = document.createElement("img");
+        img.src = "./img/result/love.gif";
+        let src = document.getElementById("base");
+        src.appendChild(img);
+        outputDescription.textContent = "You two are in";
         output.textContent = "LOVE";
     } else if (count === 3) {
+        let img = document.createElement("img");
+        img.src = "./img/result/affection.gif";
+        let src = document.getElementById("base");
+        src.appendChild(img);
+        outputDescription.textContent = "Your relationship is only";
         output.textContent = "AFFECTION";
     } else if (count === 4) {
+        let img = document.createElement("img");
+        img.src = "./img/result/marriage.gif";
+        let src = document.getElementById("base");
+        src.appendChild(img);
+        outputDescription.textContent = "Your relationship will end in";
         output.textContent = "MARRIAGE";
     } else if (count === 5) {
+        let img = document.createElement("img");
+        img.src = "./img/result/enemies.gif";
+        let src = document.getElementById("base");
+        src.appendChild(img);
+        outputDescription.textContent = "Be careful, you guys might become";
         output.textContent = "ENEMIES";
     } else if (count === 0) {
+        let img = document.createElement("img");
+        img.src = "./img/result/siblings.gif";
+        let src = document.getElementById("base");
+        src.appendChild(img);
+        outputDescription.textContent = "You two are as close as";
         output.textContent = "SIBLINGS";
 
     }
